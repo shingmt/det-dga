@@ -1,0 +1,7 @@
+{
+    "kafka_bootstrap_servers": ["207.148.66.72:9092"],
+    "module_code": "det-dga",
+    "module_otype": "url",
+    "module_input_format": "dict",
+    "module_output_format": "boolean"
+}
