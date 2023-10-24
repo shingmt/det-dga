@@ -149,5 +149,7 @@ class SilentWorker(SilentWorkerBase):
         #! Do something
         log('[ ][SilentWorker][infer] I\'m pretty')
 
-
-        self.classifier(list(self._map_ohash_inputs.keys()), list(self._map_ohash_inputs.values()))
+        try:
+            self.classifier(list(self._map_ohash_inputs.keys()), list(self._map_ohash_inputs.values()))
+        except Exception as e:
+            log(f'[!][SilentWorker][infer] Failed with exception: {e}')

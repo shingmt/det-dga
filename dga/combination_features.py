@@ -54,7 +54,7 @@ def features_combination(dom):
     valid_chars = {x: idx + 1 for idx, x in enumerate(dic)}
     # print(valid_chars)
     # dac trung noi ham
-    vec = [[valid_chars[y] for y in x] for x in dom]  # chuyen domain thanh vector
+    vec = [[valid_chars[y.lower()] for y in x] for x in dom]  # chuyen domain thanh vector
     vec = pad_sequences(vec, maxlen=maxlen)  # pad de co do dai bang nhau
 
     lstm_feat = load_model(Model_file).predict(vec)
